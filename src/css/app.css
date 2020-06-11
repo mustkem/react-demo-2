@@ -1,190 +1,126 @@
 .container {
-  max-width: 1200px;
+  max-width: 768px;
+  width: 100%;
   margin: auto;
+  padding: 0 30px;
 }
 
-.header {
-  background-color: #2874f0;
-  box-shadow: 0 2px 2.5px 0 rgba(36, 39, 44, 0.1);
+* {
+  box-sizing: border-box;
 }
 
-.nav ul {
-  display: flex;
-  justify-content: left;
-}
-.nav li {
-  margin-right: 20px;
-  display: flex;
-}
-
-.nav li a {
-  color: #fff;
-  padding: 15px;
-  font-size: 18px;
-  text-decoration: none;
-}
-.nav li a.active {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.footer {
-  background-color: #2874f0;
-  color: #fff;
-}
-
-.footer .content {
-  padding: 20px;
-  text-transform: uppercase;
-}
-
-.head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.head a {
-  text-transform: uppercase;
-  font-size: 15px;
-}
-
-h1 {
-  text-transform: uppercase;
-  padding: 10px 0;
-  font-size: 20px;
-  font-weight: 500;
-}
 a {
   text-decoration: none;
+  color: #fff;
 }
 
-.search-bar {
-  padding: 40px 0;
+li {
+  list-style: none;
 }
 
-input {
-  min-width: 250px;
-  padding: 3px;
-  font-size: 14px;
+.top-sec {
+  padding: 50px 0px 10px;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  z-index: 1;
 }
 
-.search-bar input {
+.top-sec .info {
   display: flex;
-  margin-left: auto;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
 }
-.products li {
-  width: 50%;
-  padding: 10px;
-  position: relative;
+
+.top-sec .info a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-/*  */
+
+.top-sec .search-bar {
+  padding: 10px 0;
+}
+
+body {
+  background-color: black;
+  color: #fff;
+}
+
 .icon {
-  font-size: 25px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  padding: 3px;
-  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  color: #fff;
 }
 
-.products .content {
-  display: flex;
-  background-color: #f3f3f391;
-  padding: 60px;
-}
-.main-content {
-  margin-bottom: 150px;
-  padding: 50px 0;
+.left-arrow-icon {
+  margin-right: 10px;
 }
 
 .products {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.container-products {
+  margin-top: 105px;
 }
 
-.products .thumb {
-  overflow: hidden;
-  margin-right: 50px;
-}
-
-.products .thumb img {
-  min-height: 100px;
-  min-width: 75px;
-  height: 100px;
-}
-
-.products .desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.layout-content {
-  min-height: 300px;
-}
-
-.product-card {
-  padding: 50px;
-  width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+.products li {
+  width: 33.33%;
+  padding: 36px 15px 54px;
   position: relative;
+  display: table-cell;
 }
-.product-card .thumb {
-  text-align: center;
-  width: 50%;
-  padding: 10px;
-}
-.product-card img {
+
+.products li img {
   width: 100%;
+  height: auto;
+  padding-bottom: 24px;
+  min-height: 123px;
 }
-.product-card .desc {
-  padding: 30px;
-  width: 50%;
+
+.products li span {
+  line-height: 22px;
 }
-.product-card strong,
-.product-card p,
-.product-card span,
-.product-card input {
-  margin-bottom: 20px;
+
+.products a {
   display: block;
 }
 
-.button {
-  border: 0px solid red;
-  outline: 0px;
-  padding: 7px 15px;
-  font-size: 15px;
-  background-color: #2874f0;
-  color: #fff;
-  margin: 0 10px;
-}
-
-.button-wrap {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.add-product-form {
-  width: 500px;
-  margin: 0 auto;
-}
-
-.add-product-form input {
-  margin-bottom: 30px;
-  width: 100%;
-  padding: 10px 15px;
-}
-
-.add-product-form button {
+.search-bar {
+  align-items: center;
+  position: relative;
   display: flex;
-  margin-left: auto;
 }
 
-.success {
-  display: block;
-  margin-bottom: 22px;
-  color: green;
+.search-input {
+  border: 0;
+  outline: 0;
+  font-size: 15px;
+  width: calc(100% - 60px);
+  height: 23px;
 }
+
+.search-bar .close {
+  margin-left: 10px;
+}
+.no-records {
+  padding-top: 10px;
+  text-align: center;
+}
+/* 
+.top-sec:after {
+  content: "";
+  background: red url("../images/nav_bar.png") no-repeat -30px -50px fixed;
+  top: 10px;
+  right: 0px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  display: inline-block;
+} */

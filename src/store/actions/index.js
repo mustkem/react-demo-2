@@ -1,7 +1,1 @@
-export {
-  getProducts,
-  getProductDetail,
-  updateProduct,
-  deleteProduct,
-  addProduct,
-} from "./products";
+export { getProducts } from "./products";

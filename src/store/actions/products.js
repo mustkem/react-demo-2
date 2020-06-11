@@ -1,3 +1,5 @@
+import { path } from "ramda";
+
 import httpInstance from "../../helpers/http-client";
 import { actionTypes } from "../action-types/action-types";
 
@@ -8,101 +10,36 @@ export const onGetProducts = (data) => {
   };
 };
 
-export const getProducts = () => (dispatch) => {
-  console.log();
+export const getProducts = (page) => (dispatch, getState) => {
   return new Promise((res, rej) => {
+    // dispatch(onGetProducts({ loading: true }));
+    console.log("testtttt");
     httpInstance({
       method: "get",
-      url: "/products",
+      url: "/CONTENTLISTINGPAGE-PAGE" + page + ".json",
+      responseType: "json", // default
     })
       .then(function (response) {
-        dispatch(onGetProducts(response.data));
+        const oldContent = path(
+          ["products", "products", "page", "content-items", "content"],
+          getState()
+        );
+
+        if (oldContent) {
+          const responseData = response.data;
+          responseData.page["content-items"].content = [
+            ...oldContent,
+            ...responseData.page["content-items"].content,
+          ];
+          dispatch(onGetProducts({ ...responseData, loading: false }));
+        } else {
+          dispatch(onGetProducts({ ...response.data, loading: false }));
+        }
         res(response);
       })
       .catch(function (error) {
         console.log(error);
         rej();
-      });
-  });
-};
-
-export const onGetProductDetail = (data) => {
-  return {
-    type: actionTypes.GET_PRODUCT_DETAIL,
-    payload: data,
-  };
-};
-
-export const getProductDetail = (id) => (dispatch) => {
-  return new Promise((res, rej) => {
-    httpInstance({
-      method: "get",
-      url: "/products/" + id,
-    })
-      .then(function (response) {
-        dispatch(onGetProductDetail(response.data));
-        res(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-        rej();
-      });
-  });
-};
-
-export const updateProduct = (id, payload) => (dispatch) => {
-  return new Promise((res, rej) => {
-    console.log(payload);
-    httpInstance({
-      method: "put",
-      url: "/products/" + id,
-      data: payload,
-    })
-      .then(function (response) {
-        dispatch(onGetProductDetail(response.data));
-        res(response);
-      })
-      .catch(function (error) {
-        rej(error.response);
-      });
-  });
-};
-
-export const onDeleteProduct = (id) => {
-  return {
-    type: actionTypes.DELETE_PRODUCT,
-    payload: id,
-  };
-};
-
-export const deleteProduct = (id) => (dispatch) => {
-  return new Promise((res, rej) => {
-    httpInstance({
-      method: "delete",
-      url: "/products/" + id,
-    })
-      .then(function (response) {
-        dispatch(onDeleteProduct(id));
-        res(response);
-      })
-      .catch(function (error) {
-        rej(error.response);
-      });
-  });
-};
-
-export const addProduct = (payload) => (dispatch) => {
-  return new Promise((res, rej) => {
-    httpInstance({
-      method: "post",
-      url: "/products",
-      data: payload,
-    })
-      .then(function (response) {
-        res(response);
-      })
-      .catch(function (error) {
-        rej(error.response);
       });
   });
 };

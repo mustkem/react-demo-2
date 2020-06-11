@@ -7,13 +7,22 @@ import { getProducts } from "../store/actions";
 
 const mapStateToProps = (state) => {
   return {
-    products: path(["products", "products"], state),
+    products: path(
+      ["products", "products", "page", "content-items", "content"],
+      state
+    ),
+    title: path(["products", "products", "page", "title"], state),
+    pageNumRequested: path(
+      ["products", "products", "page", "page-num-requested"],
+      state
+    ),
+    loading: path(["products", "products", "loading"], state),
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getProducts: () => dispatch(getProducts()),
+    getProducts: (index) => dispatch(getProducts(index)),
   };
 };
 

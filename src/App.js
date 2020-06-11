@@ -7,8 +7,6 @@ import "./css/app.css";
 import { Provider } from "react-redux";
 import { appStore } from "./store/store";
 
-import Layout from "./components/Shared/Layout";
-import About from "./components/About/About";
 import Home from "./containers/Home";
 
 function App() {
@@ -16,16 +14,11 @@ function App() {
     <Provider store={appStore}>
       <Router>
         <div className="App">
-          <Layout>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/about">
-                <About />
-              </Route>
-            </Switch>
-          </Layout>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
         </div>
       </Router>
     </Provider>

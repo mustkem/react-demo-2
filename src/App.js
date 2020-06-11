@@ -18,6 +18,9 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+            <Route exact path="/react-workshop-diagnal">
+              <Home />
+            </Route>
           </Switch>
         </div>
       </Router>

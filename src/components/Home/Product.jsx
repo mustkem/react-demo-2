@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import LazyLoad from "react-lazyload";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import missingImage from "../../images/placeholder_for_missing_posters.png";
 
@@ -13,13 +13,19 @@ function Product({ item }) {
       let img = images("./" + item["poster-image"]);
       setImgSrc(img);
     } catch {
-      console.log("test");
+      console.log("image not available");
     }
   }, []);
+
   return (
     <li>
       <Link to="">
-        {imgSrc && <img src={imgSrc} alt="product" />}
+        {imgSrc && (
+          <LazyLoadImage
+            alt={item.name}
+            src={imgSrc} // use normal <img> attributes as props
+          />
+        )}
         {!imgSrc && (
           <img className="missing-img" src={missingImage} alt="product" />
         )}

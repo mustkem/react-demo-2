@@ -5,6 +5,10 @@
   padding: 0 30px;
 }
 
+.home-content {
+  position: relative;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -104,6 +108,7 @@ body {
   font-size: 15px;
   width: calc(100% - 60px);
   height: 23px;
+  padding: 5px;
 }
 
 .search-bar .close {
@@ -113,14 +118,17 @@ body {
   padding-top: 10px;
   text-align: center;
 }
-/* 
+
 .top-sec:after {
   content: "";
-  background: red url("../images/nav_bar.png") no-repeat -30px -50px fixed;
-  top: 10px;
+  background: url("../images/nav_bar.png") 0 0 no-repeat;
+  background-size: cover;
   right: 0px;
   left: 0;
-  bottom: 0;
+  bottom: -35px;
   position: absolute;
   display: inline-block;
-} */
+  height: 100px;
+  width: 100%;
+  z-index: -1;
+}

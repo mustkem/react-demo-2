@@ -23,7 +23,11 @@ class Home extends React.Component {
   }
 
   handleScroll = () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    if (
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 &&
+      !this.props.loading &&
+      this.state.page < 3 // total page availabe - will come from BE
+    ) {
       this.setState({
         page: this.state.page + 1,
       });
@@ -31,11 +35,7 @@ class Home extends React.Component {
   };
 
   componentDidUpdate(prevProp, prevState) {
-    if (
-      this.state.page !== prevState.page &&
-      !this.props.loading &&
-      prevState.page <= 3
-    ) {
+    if (this.state.page !== prevState.page) {
       this.props.getProducts(this.state.page);
     }
   }
@@ -50,7 +50,6 @@ class Home extends React.Component {
       this.props.products.filter((item) => {
         const lowerCaseName = item.name.toLowerCase();
         const lowerCaseSearchString = this.state.searchString.toLowerCase();
-        console.log();
         return lowerCaseName.includes(lowerCaseSearchString);
       })
     );
@@ -80,7 +79,7 @@ class Home extends React.Component {
                 </Link>
                 <FiSearch
                   onClick={this.handleSearchBarModal}
-                  className="icon"
+                  className="icon search"
                 />
               </div>
             )}
@@ -111,12 +110,7 @@ class Home extends React.Component {
           <ul className="products">
             {this.filterItems() &&
               this.filterItems().map((item, index) => {
-                return (
-                  <Product
-                    key={index + "" + this.props.pageNumRequested}
-                    item={item}
-                  />
-                );
+                return <Product key={index} item={item} />;
               })}
           </ul>
           {this.filterItems() && this.filterItems().length === 0 && (

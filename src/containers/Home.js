@@ -12,10 +12,6 @@ const mapStateToProps = (state) => {
       state
     ),
     title: path(["products", "products", "page", "title"], state),
-    pageNumRequested: path(
-      ["products", "products", "page", "page-num-requested"],
-      state
-    ),
     loading: path(["products", "products", "loading"], state),
   };
 };

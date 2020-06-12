@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-workshop-diagnal/static/css/main.1e464b69.chunk.css",
-    "main.js": "/react-workshop-diagnal/static/js/main.d7ffb60d.chunk.js",
-    "main.js.map": "/react-workshop-diagnal/static/js/main.d7ffb60d.chunk.js.map",
+    "main.js": "/react-workshop-diagnal/static/js/main.ee333af6.chunk.js",
+    "main.js.map": "/react-workshop-diagnal/static/js/main.ee333af6.chunk.js.map",
     "runtime-main.js": "/react-workshop-diagnal/static/js/runtime-main.f0187560.js",
     "runtime-main.js.map": "/react-workshop-diagnal/static/js/runtime-main.f0187560.js.map",
     "static/js/2.aae69920.chunk.js": "/react-workshop-diagnal/static/js/2.aae69920.chunk.js",
     "static/js/2.aae69920.chunk.js.map": "/react-workshop-diagnal/static/js/2.aae69920.chunk.js.map",
     "index.html": "/react-workshop-diagnal/index.html",
-    "precache-manifest.b89dd5ed8458a43b0311526a9b1f23c8.js": "/react-workshop-diagnal/precache-manifest.b89dd5ed8458a43b0311526a9b1f23c8.js",
+    "precache-manifest.6146dc295051e6427dfe840d6e82867f.js": "/react-workshop-diagnal/precache-manifest.6146dc295051e6427dfe840d6e82867f.js",
     "service-worker.js": "/react-workshop-diagnal/service-worker.js",
     "static/css/main.1e464b69.chunk.css.map": "/react-workshop-diagnal/static/css/main.1e464b69.chunk.css.map",
     "static/js/2.aae69920.chunk.js.LICENSE.txt": "/react-workshop-diagnal/static/js/2.aae69920.chunk.js.LICENSE.txt",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.f0187560.js",
     "static/js/2.aae69920.chunk.js",
     "static/css/main.1e464b69.chunk.css",
-    "static/js/main.d7ffb60d.chunk.js"
+    "static/js/main.ee333af6.chunk.js"
   ]
 }

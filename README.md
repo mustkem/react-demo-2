@@ -1,4 +1,5 @@
 Notes:
+
 1.Two test cases are added. These test cases check for links. It they got rendered or not. 2. Dynamic loading of static image is appied. Images can be loaded form a local folder dynamically.
 
 3. This repo is hosted on github pages - find http://mustkeom.github.io/react-workshop-diagnal

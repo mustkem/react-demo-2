@@ -38,7 +38,6 @@ function Product({ item }) {
       bounding.right <= window.innerWidth &&
       bounding.top <= window.innerHeight
     ) {
-      setAskForImageFlag(false);
       lazyLoadImage();
       imageLoadStatus = true;
       // console.log("Element is in the viewport!");

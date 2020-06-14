@@ -4,8 +4,8 @@ For Lazy loading of image: Image will be called only when it starts geting visib
 
 Below test cases are covevered
 1. Should render home page correctly
-2. Should calls call componentDidMount and thereafter call action.
-3. Should accept action props
+2. Should call componentDidMount and thereafter call action.
+3. Should accept props
 These test cases are common test cases for any component. A report can be found below. 
 
 Test Suites: 1 passed, 1 total

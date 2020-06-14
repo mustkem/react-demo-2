@@ -1,14 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import missingImage from "../../images/placeholder_for_missing_posters.png";
 
 function Product({ item }) {
   const [imgSrc, setImgSrc] = useState("");
-  const [askForImgFlag, setAskForImageFlag] = useState(true);
   const myRef = useRef(null);
-  let imageLoadStatus = false;
+  let imageLoadStatus = false; // only used one time in component //
 
   useEffect(() => {
     window.addEventListener("scroll", handleProductScroll);

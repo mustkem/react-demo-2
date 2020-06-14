@@ -1,10 +1,22 @@
 Notes:
 
-1.Two test cases are added. These test cases check for links. It they got rendered or not. 2. Dynamic loading of static image is appied. Images can be loaded form a local folder dynamically.
+For Lazy loading of image: Image will be called only when it starts geting visible in viewport when user scroll down or is already visible in dom. Code for this is available in product.jsx file.
 
-3. This repo is hosted on github pages - find http://mustkeom.github.io/react-workshop-diagnal
-4. Search/filter functionality is added.
-5. Dynamic loading / lazy loading of more data is intigated.
+Below test cases are covevered
+1. Should render home page correctly
+2. Should call componentDidMount and thereafter call action.
+3. Should accept props
+These test cases are common test cases for any component. A report can be found below. 
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   1 obsolete, 1 passed, 1 total
+Time:        15.647s
+
+This repo is hosted on github pages - find http://mustkeom.github.io/react-workshop-diagnal
+Search/filter functionality is added.
+
+Infinite loading is working on scroll. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-workshop-diagnal/static/css/main.1e464b69.chunk.css",
-    "main.js": "/react-workshop-diagnal/static/js/main.ee333af6.chunk.js",
-    "main.js.map": "/react-workshop-diagnal/static/js/main.ee333af6.chunk.js.map",
+    "main.css": "/react-workshop-diagnal/static/css/main.6d6e0881.chunk.css",
+    "main.js": "/react-workshop-diagnal/static/js/main.d31d6eca.chunk.js",
+    "main.js.map": "/react-workshop-diagnal/static/js/main.d31d6eca.chunk.js.map",
     "runtime-main.js": "/react-workshop-diagnal/static/js/runtime-main.f0187560.js",
     "runtime-main.js.map": "/react-workshop-diagnal/static/js/runtime-main.f0187560.js.map",
-    "static/js/2.aae69920.chunk.js": "/react-workshop-diagnal/static/js/2.aae69920.chunk.js",
-    "static/js/2.aae69920.chunk.js.map": "/react-workshop-diagnal/static/js/2.aae69920.chunk.js.map",
+    "static/js/2.b97d7408.chunk.js": "/react-workshop-diagnal/static/js/2.b97d7408.chunk.js",
+    "static/js/2.b97d7408.chunk.js.map": "/react-workshop-diagnal/static/js/2.b97d7408.chunk.js.map",
     "index.html": "/react-workshop-diagnal/index.html",
-    "precache-manifest.6146dc295051e6427dfe840d6e82867f.js": "/react-workshop-diagnal/precache-manifest.6146dc295051e6427dfe840d6e82867f.js",
+    "precache-manifest.5039f1f738f379e89455a637bcb03cf4.js": "/react-workshop-diagnal/precache-manifest.5039f1f738f379e89455a637bcb03cf4.js",
     "service-worker.js": "/react-workshop-diagnal/service-worker.js",
-    "static/css/main.1e464b69.chunk.css.map": "/react-workshop-diagnal/static/css/main.1e464b69.chunk.css.map",
-    "static/js/2.aae69920.chunk.js.LICENSE.txt": "/react-workshop-diagnal/static/js/2.aae69920.chunk.js.LICENSE.txt",
+    "static/css/main.6d6e0881.chunk.css.map": "/react-workshop-diagnal/static/css/main.6d6e0881.chunk.css.map",
+    "static/js/2.b97d7408.chunk.js.LICENSE.txt": "/react-workshop-diagnal/static/js/2.b97d7408.chunk.js.LICENSE.txt",
     "static/media/poster1.jpg": "/react-workshop-diagnal/static/media/poster1.d5f2a7f4.jpg",
     "static/media/poster2.jpg": "/react-workshop-diagnal/static/media/poster2.81ccf144.jpg",
     "static/media/poster3.jpg": "/react-workshop-diagnal/static/media/poster3.e242f037.jpg",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f0187560.js",
-    "static/js/2.aae69920.chunk.js",
-    "static/css/main.1e464b69.chunk.css",
-    "static/js/main.ee333af6.chunk.js"
+    "static/js/2.b97d7408.chunk.js",
+    "static/css/main.6d6e0881.chunk.css",
+    "static/js/main.d31d6eca.chunk.js"
   ]
 }

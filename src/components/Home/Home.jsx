@@ -73,7 +73,7 @@ class Home extends React.Component {
           <div className="container">
             {!this.state.searchBarModal && (
               <div className="info">
-                <Link to="">
+                <Link className="title" to="">
                   <BsArrowLeftShort className="icon left-arrow-icon" />
                   {this.props.title}
                 </Link>
